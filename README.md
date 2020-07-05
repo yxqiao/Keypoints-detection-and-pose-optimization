@@ -1,10 +1,10 @@
-# Q-Learning
+# Keypoint Detection and Pose Optimization
 
-This project contains the source code for Q-learning with the DDQN trick. We implement the DDQN in two classific model provided by gyms, CartPole and Acrobot. 
+This project contains the source code for Keypoint detection and pose optimization problem.
 
-The code is testes in the following enviroment.
+The code use the following package.
 
-- OpenAI Gym’s version of CartPole and Acrobot
+- Numpy
 - Pytorch
 
 ## Keypoint Detection
@@ -22,17 +22,26 @@ For the second step, we use the coordinates of detected keypoints to estimate th
 
 ### Result
 
-The goal of the CartPole is to stay upright as long as possible. Without training the CartPole can easily fall down. With 2000 iterations of training using our network, the CartPole can stay upright.
+Ground truth image key points:
 
 <p align="center">
-  <img src="document/img/carpolefinal2.gif" width="300"><br>
+  <img src="/img/GT of keypoitns.png" width="300"><br>
 </p>
 
-For each iteration, the mini-batch size I use is 64. I track loss and average cumulative reward evaluated on 50 trajectories for each iteration. I update the target network every 100 iterations. Each time I update the target network, the loss will increase as shown in figure 1. The average reward will increase and become stable over time. 
+Prediction heatmaps:
 
 <p align="center">
-  <img src="document/img/avg_reward1.png" width="400"><br>
+  <img src="/img/predicted heatmaps.png" width="400"><br>
 </p>
 
- 
+Pediction image key points:
+<p align="center">
+  <img src="/img/prediction of keypoints.png" width="400"><br>
+</p>
+
+Generated examples:
+
+<p align="center">
+  <img src="/img/pose optimization.png" width="400"><br>
+</p>
 
