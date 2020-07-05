@@ -15,17 +15,10 @@ For the keypoint representation, we will use heatmaps. Given an image of input s
 
 Having synthesized these heatmaps, we have created input-output pairs for training. We use RMSprop for the optimization, the learning rate is equal to 2.5e-4, while we set the batch size equal to 8. To avoid overfitting, we also use data augmentation, in the form of scale augmentations and 2D rotations in the input.
 
-
-## Pose Optimization
-
-For the second step, we use the coordinates of detected keypoints to estimate the 6DoF pose of the object. We need to align the CAD model of the object to the detected 2D keypoints, i.e., estimate the rotation R ∈ R3x3 and the translation T ∈ R3x1 between the object and the camera frame such that the projection of the CAD model aligns with the object in the image.
-
-### Result
-
 Ground truth image key points:
 
 <p align="center">
-  <img src="/img/GT of keypoitns.png" width="300"><br>
+  <img src="/img/GT of keypoitns.png" width="400"><br>
 </p>
 
 Prediction heatmaps:
@@ -35,9 +28,14 @@ Prediction heatmaps:
 </p>
 
 Pediction image key points:
+
 <p align="center">
   <img src="/img/prediction of keypoints.png" width="400"><br>
 </p>
+
+## Pose Optimization
+
+For the second step, we use the coordinates of detected keypoints to estimate the 6DoF pose of the object. We need to align the CAD model of the object to the detected 2D keypoints, i.e., estimate the rotation R ∈ R3x3 and the translation T ∈ R3x1 between the object and the camera frame such that the projection of the CAD model aligns with the object in the image.
 
 Generated examples:
 
