@@ -15,18 +15,6 @@ For the keypoint representation, we will use heatmaps. Given an image of input s
 
 Having synthesized these heatmaps, we have created input-output pairs for training. We use RMSprop for the optimization, the learning rate is equal to 2.5e-4, while we set the batch size equal to 8. To avoid overfitting, we also use data augmentation, in the form of scale augmentations and 2D rotations in the input.
 
-Ground truth image key points:
-
-<p align="center">
-  <img src="/img/GT of keypoitns.png" width="400"><br>
-</p>
-
-Prediction heatmaps:
-
-<p align="center">
-  <img src="/img/predicted heatmaps.png" width="400"><br>
-</p>
-
 Pediction image key points:
 
 <p align="center">
